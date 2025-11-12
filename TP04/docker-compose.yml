@@ -1,0 +1,5 @@
+services:
+  c1: { image: ${DOCKER_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}, ports: ["8081:80"], networks: [mynetwork] }
+  c2: { image: ${DOCKER_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}, ports: ["8082:80"], networks: [mynetwork] }
+  c3: { image: ${DOCKER_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}, ports: ["8083:80"], networks: [mynetwork] }
+networks: { mynetwork: {} }
